@@ -70,7 +70,7 @@ public class TrainDetailsUtilsTest {
 		if (actual == null){
 			System.out.println("No Details found");
 		} else {
-			System.out.println("Details found lowest speed is " + actual);
+			System.out.println("Details found Highest energy is " + actual.getEnergy() + " and speed is " + actual.getSpeed());
 		}
 		
 		//Assert
@@ -87,7 +87,7 @@ public class TrainDetailsUtilsTest {
 		if (actual == null){
 			System.out.println("No Details found");
 		} else {
-			System.out.println("Details found lowest speed is " + actual);
+			System.out.println("Details found Highest energy is " + actual.getEnergy() + " and speed is " + actual.getSpeed());
 		}
 		
 		//Assert
