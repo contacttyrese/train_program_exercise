@@ -1,10 +1,12 @@
-package com.example;
+package com.example.utils;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.example.TrainDetails;
 
 public abstract class TrainDetailsUtils {
 	private static final File fileName = new File("TrainDetails.txt");
