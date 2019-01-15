@@ -19,7 +19,7 @@ public class TrainDelayDetailsDao {
 		try {
 			statement = connection.createStatement();
 			String sql = "INSERT INTO train_delay_details "
-					+ "(journey_id, train_id, station, departure_time_at_station, departure_lateness_in_seconds) "
+					+ "(journey_id, train_id, station, departure_time, departure_late) "
 					+ "VALUES "
 					+ "(" + trainDelayDetails.getJourneyId() + ",'"
 					+ trainDelayDetails.getTrainId() + "','" + trainDelayDetails.getStation() + "','"
