@@ -19,7 +19,7 @@ public class TrainDelayDetailsDao {
 		try {
 			statement = connection.createStatement();
 			String sql = "INSERT INTO train_delay_details "
-					+ "(journey_id, train_id, station, departure_time, departure_late) "
+					+ "(journey_id, train_id, station, departure_time, departure_late_in_secs) "
 					+ "VALUES "
 					+ "(" + trainDelayDetails.getJourneyId() + ",'"
 					+ trainDelayDetails.getTrainId() + "','" + trainDelayDetails.getStation() + "','"
@@ -27,8 +27,8 @@ public class TrainDelayDetailsDao {
 					+ "')";
 			statement.executeUpdate(sql);
 			statement.close();
-		} catch (SQLException e) {
-			e.printStackTrace();
+		} catch (SQLException exception) {
+			exception.printStackTrace();
 		}
 	}
 

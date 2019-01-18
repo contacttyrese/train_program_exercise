@@ -18,7 +18,7 @@ public class Application {
 		String password = "password";
 		String url = "jdbc:oracle:thin:@127.0.0.1:1521:xe";
 		try {
-//			connection = DriverManager.getConnection(url, user, password);
+			connection = DriverManager.getConnection(url, user, password);
 			System.out.println("connection successfully established..");
 			final TrainDelayDetailsDao trainDelayDetailsDao = new TrainDelayDetailsDao(connection);
 			final TrainDriverDetailsDao trainDriverDetailsDao = new TrainDriverDetailsDao(connection);
@@ -26,11 +26,11 @@ public class Application {
 			List<TrainDelayDetails> listOfDelayDetails = TrainDelayDetailsUtils.getAllDelayDetails();
 			List<TrainDriverDetails> listOfDriverDetails = TrainDriverDetailsUtils.getAllDriverDetails();
 			
-//			listOfDelayDetails.forEach(details -> trainDelayDetailsDao.addTrainDelayDetails(details));
-//			listOfDriverDetails.forEach(details -> trainDriverDetailsDao.addTrainDriverDetails(details));
+			listOfDelayDetails.forEach(details -> trainDelayDetailsDao.addTrainDelayDetails(details));
+			listOfDriverDetails.forEach(details -> trainDriverDetailsDao.addTrainDriverDetails(details));
 			
-			System.out.println("success");
 			connection.close();
+			System.out.println("success");
 		} catch (SQLException exception) {
 			System.out.println("connection unsuccessful..");
 			exception.printStackTrace();

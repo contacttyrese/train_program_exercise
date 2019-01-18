@@ -26,32 +26,22 @@ public class TrainDelayDetails {
 		return trainId;
 	}
 
-	public void setTrainId(String trainId) {
-		this.trainId = trainId;
-	}
-
 	public String getStation() {
 		return station;
-	}
-
-	public void setStation(String station) {
-		this.station = station;
 	}
 
 	public String getDepartureTime() {
 		return departureTime;
 	}
 
-	public void setDepartureTime(String departureTime) {
-		this.departureTime = departureTime;
-	}
-
 	public String getDepatureLate() {
 		return depatureLate;
 	}
 
-	public void setDepatureLate(String depatureLate) {
-		this.depatureLate = depatureLate;
+	@Override
+	public String toString() {
+		return "TrainDelayDetails [journeyId=" + journeyId + ", trainId=" + trainId + ", station=" + station
+				+ ", departureTime=" + departureTime + ", depatureLate=" + depatureLate + "]";
 	}
-	
+
 }

@@ -27,8 +27,8 @@ public class TrainDriverDetailsDao {
 					+ trainDriverDetails.getJourneyStatus() + "')";
 			statement.executeUpdate(sql);
 			statement.close();
-		} catch (SQLException e) {
-			e.printStackTrace();
+		} catch (SQLException exception) {
+			exception.printStackTrace();
 		}
 	}
 

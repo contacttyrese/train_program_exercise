@@ -1,7 +1,7 @@
 CREATE TABLE train_driver_details
 (    journey_id NUMBER(3) NOT NULL,
     train_id VARCHAR2(4),
-    star_station VARCHAR2(255),
+    start_station VARCHAR2(255),
     end_station VARCHAR2(255),
     driver_name VARCHAR2(255),
     journey_status VARCHAR2(255)
@@ -17,7 +17,7 @@ CREATE TABLE train_delay_details
     train_id VARCHAR2(4),
     station VARCHAR2(255),
     departure_time VARCHAR2(255),
-    departure_late VARCHAR2(255)
+    departure_late_in_secs VARCHAR2(255)
 );
 
 ALTER TABLE train_delay_details
